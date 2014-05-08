@@ -3,6 +3,7 @@
 namespace LineStorm\ArticleComponentBundle\Model;
 
 use Doctrine\ORM\Mapping as ORM;
+use LineStorm\Content\Model\ContentNodeInterface;
 
 class Article
 {
@@ -21,6 +22,11 @@ class Article
      * @var integer
      */
     protected $order;
+
+    /**
+     * @var ContentNodeInterface
+     */
+    protected $contentNode;
 
     /**
      * @return int
@@ -69,4 +75,22 @@ class Article
 
         return $this;
     }
+
+    /**
+     * @param ContentNodeInterface $contentNode
+     */
+    public function setContentNode(ContentNodeInterface $contentNode)
+    {
+        $this->contentNode = $contentNode;
+    }
+
+    /**
+     * @return ContentNodeInterface
+     */
+    public function getContentNode()
+    {
+        return $this->contentNode;
+    }
+
+
 }
