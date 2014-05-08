@@ -2,9 +2,9 @@
 
 namespace LineStorm\ArticleComponentBundle\Component;
 
+use Andy\PortfolioBundle\Entity\Article;
 use LineStorm\Content\Component\AbstractBodyComponent;
 use LineStorm\Content\Component\ComponentInterface;
-use LineStorm\PostBundle\Model\PostArticle;
 use LineStorm\Content\Component\View\ComponentView;
 use Symfony\Component\Form\FormBuilderInterface;
 
@@ -23,7 +23,7 @@ class ArticleComponent extends AbstractBodyComponent implements ComponentInterfa
      */
     public function isSupported($entity)
     {
-        return ($entity instanceof PostArticle);
+        return ($entity instanceof Article);
     }
 
     /**
