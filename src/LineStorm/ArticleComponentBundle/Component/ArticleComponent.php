@@ -15,8 +15,25 @@ use Symfony\Component\Form\FormBuilderInterface;
  */
 class ArticleComponent extends AbstractBodyComponent implements ComponentInterface
 {
-    protected $name = 'Article';
-    protected $id = 'articles';
+    /**
+     * Fetch the component id string
+     *
+     * @return string
+     */
+    public function getId()
+    {
+        return 'articles';
+    }
+
+    /**
+     * Fetch the component name
+     *
+     * @return mixed
+     */
+    public function getName()
+    {
+        return  'Article';
+    }
 
     /**
      * @inheritdoc
