@@ -4,8 +4,9 @@ define(['jquery', 'jckeditor'], function ($, ckeditor) {
 
     CKEDITOR.config.customConfig = window.lineStormTags.assets.path+'/bundles/linestormarticlecomponent/js/ckeditor/config.js';
 
-    CKEDITOR.plugins.addExternal( 'pbckcode', window.lineStormTags.assets.path+'/vendor/PBCKCode/' );
-    CKEDITOR.plugins.addExternal( 'linestorm-media', window.lineStormTags.assets.path+'/bundles/linestormarticlecomponent/js/ckeditor/plugins/linestorm-media/' );
+    CKEDITOR.plugins.addExternal( 'pbckcode',           window.lineStormTags.assets.path+'/vendor/PBCKCode/' );
+    CKEDITOR.plugins.addExternal( 'youtube',            window.lineStormTags.assets.path+'/vendor/ckeditor-youtube-plugin/youtube/' );
+    CKEDITOR.plugins.addExternal( 'linestorm-media',    window.lineStormTags.assets.path+'/bundles/linestormarticlecomponent/js/ckeditor/plugins/linestorm-media/' );
 
     CKEDITOR.plugins.addExternal( 'carousel',   window.lineStormTags.assets.path+'/bundles/linestormarticlecomponent/js/ckeditor/plugins/carousel/' );
     CKEDITOR.plugins.addExternal( 'featurette', window.lineStormTags.assets.path+'/bundles/linestormarticlecomponent/js/ckeditor/plugins/featurette/' );

@@ -31,11 +31,11 @@ CKEDITOR.editorConfig = function( config ) {
 
     // Remove some buttons, provided by the standard plugins, which we don't
     // need to have in the Standard(s) toolbar.
-    config.removeButtons = 'Subscript,Superscript,About,Maximize';
+    config.removeButtons = 'About,Maximize';
 
     config.removePlugins = 'elementspath';
 
-    config.extraPlugins = 'autogrow,pbckcode,linestorm-media,carousel,featurette,jumbotron,trifold,listgroup,badge';
+    config.extraPlugins = 'youtube,autogrow,pbckcode,linestorm-media,carousel,featurette,jumbotron,trifold,listgroup,badge';
 
     config.contentsCss = window.lineStormTags.assets.path+'/css/main.css';
 
