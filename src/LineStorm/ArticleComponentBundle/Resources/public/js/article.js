@@ -17,8 +17,13 @@ define(['jquery', 'jckeditor'], function ($, ckeditor) {
 
     $(document).on('widget-init', '.item-articles', function(){
 
-        $(this).find('input[name$="[order]"]').filter(function(){ return this.name.match(/\[articles\]\[\d+\]\[order\]$/); }).val(contentCounts.components).focus();
-        $(this).find('textarea.ckeditor-textarea').ckeditor().focus();
+        var $el = $(this);
+        var $orderEl = $el.find('input[name$="[order]"]');
+        $orderEl.filter(function(){ return this.name.match(/\[articles\]\[\d+\]\[order\]$/); });
+        if(!$orderEl.val()){
+            $orderEl.val(contentCounts.components);
+        }
+        $el.find('textarea.ckeditor-textarea').ckeditor().focus();
 
     });
 
